@@ -2,8 +2,8 @@ class ReStackLayer
 {
     constructor()
     {
-        this.layerCoins = new Decimal(10000000);
-        this.timeSpent = 0;
+        this.layerCoins = new Decimal(0);
+        this.timeSpent = 100000;
         this.timesReset = 0;
         this.permUpgrades = {
             prestigeGains: new RestackLayerUpgrade("All Prestige gains are higher",
