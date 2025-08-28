@@ -155,7 +155,7 @@ class LayerUpgrade extends AbstractUpgrade
         if(this.layerCost.resource.gte(this.currentPrice()) && this.level.lt(this.maxLevel))
         {
             this.layerCost.resource = this.layerCost.resource.sub(this.currentPrice());
-            this.level = this.level.add(1);
+            this.level = this.level.add(100);
         }
     }
 
@@ -393,7 +393,7 @@ var effectDisplayTemplates = {
         return function()
         {
             let thisVal = this.apply().mul(100);
-            let nextVal = this.getEffect(this.level.add(1)).mul(100);
+            let nextVal = this.getEffect(this.level.add(1)).mul(10000);
             if(this.level.eq(this.maxLevel))
             {
                 return prefix + functions.formatNumber(thisVal, digits, digits1000) + suffix;
